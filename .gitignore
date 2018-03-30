@@ -1,17 +1,3 @@
-# general hidden files/directories
-.DS_Store
-.idea
-
-# file patterns
-*~
-
-# Project Specific patterns
-man
-test/rsrc/lyrics/*
-
-# The rest is from https://www.gitignore.io/api/python
-
-### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -34,6 +20,7 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -56,12 +43,23 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
 .hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
 
 # Flask stuff:
 instance/
 .webassets-cache
+
+# Scrapy stuff:
+.scrapy
 
 # Sphinx documentation
 docs/_build/
@@ -69,23 +67,35 @@ docs/_build/
 # PyBuilder
 target/
 
+# Jupyter Notebook
+.ipynb_checkpoints
+
 # pyenv
 .python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
 
 # dotenv
 .env
 
 # virtualenv
+.venv
 venv/
 ENV/
 
 # Spyder project settings
 .spyderproject
+.spyproject
 
 # Rope project settings
 .ropeproject
 
-# PyDev and Eclipse project settings
-/.project
-/.pydevproject
-/.settings
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
